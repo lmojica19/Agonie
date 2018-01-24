@@ -93,9 +93,37 @@ def reverse():
      else:
        stopAll()
 
+#Start with this
 import RoboPiLib as RPL
 RPL.RoboPiInit("/dev/ttyAMA0",115200)
+
+#Sensor
+RPL.digitalRead(16)
+
+# Move forward
+RPL.servoWrite(0,1000)
+RPL.servoWrite(1,2000)
+
+# Move backward
+RPL.servoWrite(0,2000)
+RPL.servoWrite(1,1000)
+
+# Turn left
+RPL.servoWrite(0,1500)
+RPL.servoWrite(1,2000)
+
+# Turn right
+RPL.servoWrite(0,1000)
+RPL.servoWrite(1,1500)
+
+# Spin left
+RPL.servoWrite(0,2000)
+RPL.servoWrite(1,2000)
+
+#Spin right
 RPL.servoWrite(0,1000)
 RPL.servoWrite(1,1000)
+
+# Stop
 RPL.servoWrite(0,0)
 RPL.servoWrite(1,0)

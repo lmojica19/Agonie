@@ -6,6 +6,6 @@ RPL.RoboPiInit("/dev/ttyAMA0",115200)
 RPL.servoWrite(0,1000)
 RPL.servoWrite(1,2000)
 
-if RPL.digitalRead(16) = 0:
+if RPL.digitalRead(16) == 0:
     RPL.servoWrite(0,0)
     RPL.servoWrite(1,0)

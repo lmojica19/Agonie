@@ -47,8 +47,9 @@ def reverse():
    ch = sys.stdin.read(1) # this reads one character of input without requiring an enter keypress
    signal.setitimer(signal.ITIMER_REAL,0) # this turns off the alarm
    if ch == '*': # pressing the asterisk key kills the process
-     termios.tcsetattr(fd, termios.TCSADRAIN, old_settings) # this resets the console settings
-     break # this ends the loop
+    stopAll() # stops everything from moving
+    termios.tcsetattr(fd, termios.TCSADRAIN, old_settings) # this resets the console settings
+    break # this ends the loop
    else:
      if ch == 'w':
        forward()
